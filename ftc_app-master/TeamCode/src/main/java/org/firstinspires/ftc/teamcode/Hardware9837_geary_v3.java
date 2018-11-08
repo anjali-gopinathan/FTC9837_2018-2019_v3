@@ -23,8 +23,8 @@ class Hardware9837_geary_v3 {
         rightMotor = hardwareMap.dcMotor.get("rightDrive");
         leftMotor = hardwareMap.dcMotor.get("leftDrive");
 
-        rightMotor.setDirection(DcMotor.Direction.FORWARD);
-        leftMotor.setDirection(DcMotor.Direction.REVERSE);
+        rightMotor.setDirection(DcMotor.Direction.REVERSE);
+        leftMotor.setDirection(DcMotor.Direction.FORWARD);
 
 //        colorSensor = hwMap.colorSensor.get("color sensor");
 
