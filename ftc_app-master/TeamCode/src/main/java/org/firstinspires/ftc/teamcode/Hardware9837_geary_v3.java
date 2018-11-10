@@ -13,7 +13,8 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 class Hardware9837_geary_v3 {
     DcMotor rightMotor;
     DcMotor leftMotor;
-    ColorSensor colorSensor;
+    ColorSensor colorSensorLeft;
+    ColorSensor colorSensorRight;
 
     HardwareMap hwMap = null;
     //private ElapsedTime period  = new ElapsedTime();
@@ -23,10 +24,11 @@ class Hardware9837_geary_v3 {
         rightMotor = hardwareMap.dcMotor.get("rightDrive");
         leftMotor = hardwareMap.dcMotor.get("leftDrive");
 
+        colorSensorLeft = hardwareMap.colorSensor.get("colorSensorLeft");
+        colorSensorRight = hardwareMap.colorSensor.get("colorSensorRight");
+
         rightMotor.setDirection(DcMotor.Direction.REVERSE);
         leftMotor.setDirection(DcMotor.Direction.FORWARD);
-
-//        colorSensor = hwMap.colorSensor.get("color sensor");
 
         //set pwr to 0
 
